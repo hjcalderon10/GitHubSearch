@@ -27,8 +27,8 @@ class TextBox extends Component{
 }
 
 TextBox.PropTypes={
-	onSearch: PropTypes.func.isRequired;
-	user: PropTypes.string.isRequired;
+	onSearch: PropTypes.func.isRequired,
+	user: PropTypes.string.isRequired
 }
 
 export default TextBox;

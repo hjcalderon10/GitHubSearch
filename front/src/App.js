@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TextBox from "./TextBox.js";
-import Lista from "./Lista.js";
+import ListaUsuarios from "./ListaUsuarios.js";
 import Follower from "./Follower.js";
 
 class App extends Component {
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
       <TextBox onSearch = {this.onSearch.bind}/>
-      <Lista listaUsuarios={this.state.listaUsuarios}/>
+      <ListaUsuarios listaUsuarios={this.state.listaUsuarios}/>
       <Follower followers={this.state.followers}/>
       </div>
       );

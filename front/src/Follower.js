@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 //import "./Stylesheets/Followers.css";
 
-class Followers extends Component{
+class Follower extends Component{
 	
 	constructor(props){
 		super(props);
@@ -34,9 +34,9 @@ renderAccion(){
 }
 
 
-Followers.PropTypes={
+Follower.PropTypes={
 	recursos:PropTypes.object.isRequired
 };
 
 
-export default Followers;
+export default Follower;

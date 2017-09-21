@@ -12,11 +12,12 @@ class ListaUsuarios extends Component{
 	renderAccion(){
 		if(this.props.listaUsuarios.length !== 0){
 			return (<div className="recursos">
-				this.props.listaUsuarios.map((t,i)=>{
-					<div className="recurso">
-					<span>{t.nombre_usuario} -> </span>      
-					</div>
-					</div>}));
+						this.props.listaUsuarios.map((t,i)=>{
+							<div className="recurso">
+							<span>{t.nombre_usuario} -> </span>      
+							</div>
+						})
+					</div>);
 		}
 		else{
 			return <div></div>;
@@ -26,7 +27,7 @@ class ListaUsuarios extends Component{
 	render(){
 		return(
 		<div className="content" id="contenidoRecursos">
-		{this.renderAccion()}
+			{this.renderAccion()}
 		</div>
 		);
 	}
