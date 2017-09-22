@@ -1,0 +1,19 @@
+.follower{
+	margin-right: 5%;
+}
+
+.followers-container{
+	width: 100%;
+	height: 15rem;
+	overflow:scroll;
+}
+
+.follower-mayor-container{
+	float: right;
+	padding: 6rem 1%;
+	padding-top: 1rem;
+	padding-right:5%;
+	width: 97%;
+	min-width:307px;
+	background-color: #f3f2f2;
+}

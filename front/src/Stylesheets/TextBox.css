@@ -1,0 +1,12 @@
+.textBox{
+	padding-bottom: 1rem;
+}
+
+#inputBox{
+	height: 2.5rem;
+}
+
+#boton{
+	float:right;
+	height: 2.5rem;
+}

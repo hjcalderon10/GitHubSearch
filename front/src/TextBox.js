@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-//import "./Stylesheets/TextBox.css";
+import "./Stylesheets/TextBox.css";
 
 class TextBox extends Component{
 	constructor(props){
@@ -8,27 +8,31 @@ class TextBox extends Component{
 	}
 
 	onKeyPress(evt){
-		if(evt.keycode ===13){
+		if(evt.key ==="Enter"){
 			this.props.onSearch(evt.target.value);
 		}
+	}
+	onClick(evt){
+		this.props.historial();
 	}
 
 	render(){
 		return(
-		    <div className="textBox">
-		    	<div className="header">
-		    		<div className="headerItem"><span>Busqueda por usuario de GitHub</span></div>
-		    	</div>
-		    	<input type="text" placeholder="GitHub username" value={this.prop.user? this.props.user:""}
-		    		onKeyPress={this.onKeyPress.bind(this)}/>
+			<div className="textBox">
+			<div className="header">
+			<div className="headerItem"><h1>Busqueda por usuario de GitHub</h1></div>
 			</div>
-	    );
+			<input id="inputBox" type="text" placeholder="GitHub UserName" onKeyPress={this.onKeyPress.bind(this)}/>
+			<button id="boton" onClick={this.onClick.bind(this)}>Historial consultas</button>
+			</div>
+			);
+		}
 	}
-}
 
-TextBox.PropTypes={
-	onSearch: PropTypes.func.isRequired,
-	user: PropTypes.string.isRequired
-}
+	TextBox.PropTypes={
+		onSearch: PropTypes.func.isRequired,
+		historial: PropTypes.func.isRequired,
+		user: PropTypes.string.isRequired
+	}
 
-export default TextBox;
+	export default TextBox;

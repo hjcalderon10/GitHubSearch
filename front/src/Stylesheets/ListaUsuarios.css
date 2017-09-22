@@ -1,0 +1,18 @@
+.usuario{
+	margin-right: 5%;
+}
+.users-container{
+	height: 100%;
+	width: 100%;
+	overflow-x:scroll;
+}
+
+.users-mayor-container{
+	padding: 6rem 1%;
+	padding-top: 1rem;
+	padding-left:5%;
+	width:97%;
+	float:left;
+	min-width:307px;
+	background-color: #f3f2f2;
+}

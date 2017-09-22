@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-//import "./Stylesheets/Followers.css";
+import './Stylesheets/Follower.css';
+
 
 class Follower extends Component{
 	
@@ -8,35 +9,41 @@ class Follower extends Component{
 		super(props);
 	}
 
+	onClick(evt){
+		this.props.onSearchByFollower(evt.target.innerText);
+	}
 
-renderAccion(){
-		if(this.props.listaUsuarios.length !== 0){
-			return (<div className="recursos">
-				this.props.listaUsuarios.map((t,i)=>{
-					<div className="recurso">
-					<span>Nombre usuario: </span>
-					<span>{t.nombre_usuario}</span>      
-					</div>
-					</div>}));
+	renderFollowers(){
+
+		if(this.props.followers !== "Not Found" && this.props.followers.length !==0){
+			return this.props.followers.map((t,i)=>{
+				return(<div className="follower" onClick={this.onClick.bind(this)}>{t.login}</div>);
+			});
 		}
-		else{
-			return <div></div>;
+		else if(this.props.followers==="Not Found"){
+			return (<div>Usuario inexistente!</div>);
 		}
 	}
 
 	render(){
-		return(
-		<div className="content" id="contenidoRecursos">
-		{this.renderAccion()}
+		return(<div className="col-md-6 col-sm-12 col-xs-12 follower-mayor-container">
+		<div><h2>Lista Seguidores:</h2></div>
+		<div className="followers-container">
+		{this.renderFollowers()}
 		</div>
-		);
+		</div>);
+
+
 	}
+
 }
 
 
+
 Follower.PropTypes={
-	recursos:PropTypes.object.isRequired
-};
+	onSearchByFollower: PropTypes.func.isRequired,
+	followers:PropTypes.object.isRequired
+}
 
 
 export default Follower;

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-//import "./Stylesheets/ListaUsuarios.css";
+import './Stylesheets/ListaUsuarios.css';
+
 
 class ListaUsuarios extends Component{
 	
@@ -9,34 +10,34 @@ class ListaUsuarios extends Component{
 	}
 
 
-	renderAccion(){
-		if(this.props.listaUsuarios.length !== 0){
-			return (<div className="recursos">
-						this.props.listaUsuarios.map((t,i)=>{
-							<div className="recurso">
-							<span>{t.nombre_usuario} -> </span>      
-							</div>
-						})
-					</div>);
-		}
-		else{
-			return <div></div>;
+
+	renderUsers(){
+
+		if(this.props.listaUsuarios.length !==0){
+			return this.props.listaUsuarios.map((t,i)=>{
+				return(<span className="usuario">{t.usuario}    -> </span>);
+			});
 		}
 	}
 
 	render(){
-		return(
-		<div className="content" id="contenidoRecursos">
-			{this.renderAccion()}
+		return(<div className="col-md-6 col-sm-12 col-xs-12 users-mayor-container">
+		<div><h2>Lista de Usuarios:</h2></div>
+		<div className="users-container">
+		{this.renderUsers()}
 		</div>
-		);
+		</div>);
+
 	}
+
+
 }
 
 
+
 ListaUsuarios.PropTypes={
-	recursos:PropTypes.object.isRequired
-};
+	listaUsuarios:PropTypes.object.isRequired
+}
 
 
 export default ListaUsuarios;

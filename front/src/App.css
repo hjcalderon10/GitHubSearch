@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Space{
+  height: 8rem;
+  background-image: url("./images/github-frame.png");
+  -webkit-background-size: contain;
+}
+
+
+.historial{
+  overflow-x: scroll;
+  text-align: justify;
+}
