@@ -4,6 +4,9 @@ Programa para ver los seguidores de una cuenta de GitHub.
 
 Almacena las consultas para mostrar el histórico de forma user: followers.
 
+//Parcial 1 Desarrollo Aplicaciones Web:
+  Salsa secreta: Es capaz de manejar usuarios de github inexistentes y mostrarle al usuario un mensaje pertinente. 
+//
 
 Version 1.0
 
